@@ -202,12 +202,19 @@ class IndexBar extends View {
         Collections.sort(mIndexList, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if (o1.hashCode() > o2.hashCode()) {
+//                if (o1.hashCode() > o2.hashCode()) {
+//                    return 1;
+//                } else if (o1.hashCode() < o2.hashCode()) {
+//                    return -1;
+//                } else {
+//                    return 0;
+//                }
+                if ("#".equals(o1)) {
                     return 1;
-                } else if (o1.hashCode() < o2.hashCode()) {
+                } else if ("#".equals(o2)) {
                     return -1;
                 } else {
-                    return 0;
+                    return o1.compareTo(o2);
                 }
             }
         });

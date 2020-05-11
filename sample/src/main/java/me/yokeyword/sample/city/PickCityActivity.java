@@ -153,7 +153,7 @@ public class PickCityActivity extends AppCompatActivity {
 
     private List<CityEntity> initDatas() {
         List<CityEntity> list = new ArrayList<>();
-        List<String> cityStrings = Arrays.asList(getResources().getStringArray(R.array.city_array));
+        List<String> cityStrings = Arrays.asList(getResources().getStringArray(R.array.city_array1));
         for (String item : cityStrings) {
             CityEntity cityEntity = new CityEntity();
             cityEntity.setName(item);
