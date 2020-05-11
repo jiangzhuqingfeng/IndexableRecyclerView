@@ -12,6 +12,8 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -196,6 +198,19 @@ class IndexBar extends View {
         if (showAllLetter) {
 //            mIndexList.addAll(0, tempHeaderList);
         }
+
+        Collections.sort(mIndexList, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if (o1.hashCode() > o2.hashCode()) {
+                    return 1;
+                } else if (o1.hashCode() < o2.hashCode()) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
         for (String index : mIndexList) {
             Log.i("lwh", "mIndexList  index=" + index);
         }
