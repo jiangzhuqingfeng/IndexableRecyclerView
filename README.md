@@ -24,6 +24,8 @@ A RecyclerView with indexable, sticky and many other features.
 6、使用[TinyPinyin](https://github.com/promeG/TinyPinyin)代替Pinyin4j.jar库，体积更小，拼音转化速度提升4倍！
 
 # 更新日志
+1.3.1
+*迁移AndroidX,右侧导航条根据数据源显示索引字母，不添加header的字母索引
 1.3.0
 * 多音字借助TinyPinyin处理
 * 可以自定义排序方式
